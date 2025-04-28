@@ -12,7 +12,7 @@ const projects = [
     tags: ["React", "Node.js", "MongoDB", "Express", "Redux"],
     live: "https://cipher-notesapp.netlify.app/",
     source: "https://github.com/TheAmankArya/NoteApp",
-    category: "fullstack",
+    category: "fullstack", 
   },
   {
     id: 2,
