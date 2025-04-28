@@ -10,7 +10,7 @@ const projects = [
       "Capture, organize, and access your thoughts effortlessly with our smart Notes app.",
     image: "https://i.imgur.com/yICO7Sk.jpeg",
     tags: ["React", "Node.js", "MongoDB", "Express", "Redux"],
-    live: "#",
+    live: "https://cipher-notesapp.netlify.app/",
     source: "https://github.com/TheAmankArya/NoteApp",
     category: "fullstack",
   },
