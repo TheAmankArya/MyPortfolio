@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 252 77% 75%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 24 91% 53%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --background-light: 0 0% 100%;
+    --foreground-light: 240 10% 3.9%;
+    
+    --card-light: 0 0% 100%;
+    --card-foreground-light: 240 10% 3.9%;
+
+    --primary-light: 240 5.9% 10%;
+    --primary-foreground-light: 0 0% 98%;
+
+    --border-light: 240 5.9% 90%;
+  }
+
+  .dark {
+  }
+
+  .light {
+    --background: var(--background-light);
+    --foreground: var(--foreground-light);
+    --card: var(--card-light);
+    --card-foreground: var(--card-foreground-light);
+    --primary: var(--primary-light);
+    --primary-foreground: var(--primary-foreground-light);
+    --border: var(--border-light);
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-purple-dark text-foreground font-sans antialiased dark:bg-background dark:text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl;
+  }
+
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-24;
+  }
+
+  .progress-bar {
+    @apply bg-gradient-to-r from-purple to-blue-sky h-2 rounded-full transition-all duration-1000 ease-out origin-left;
+  }
+
+  .animate-on-scroll {
+    @apply opacity-0 transition-all duration-700;
+  }
+
+  .animate-on-scroll.is-visible {
+    @apply opacity-100;
+  }
+
+  .nav-link {
+    @apply relative inline-block text-white hover:text-purple transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-purple after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 bg-purple text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple/20 hover:translate-y-[-2px] active:translate-y-0 active:shadow-none;
+  }
+
+  .button-secondary {
+    @apply px-6 py-3 bg-transparent border border-orange text-orange rounded-lg font-medium transition-all duration-300 hover:bg-orange hover:text-white hover:shadow-lg hover:shadow-orange/20 hover:translate-y-[-2px] active:translate-y-0 active:shadow-none;
+  }
+
+  canvas {
+    @apply fixed top-0 left-0 w-full h-full -z-10;
+  }
+}
